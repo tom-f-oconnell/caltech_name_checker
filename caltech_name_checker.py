@@ -55,8 +55,14 @@ def main():
             response = br.submit()
             good_indices.append(i)
         except urllib.error.HTTPError as e:
-            bad_indices.append(i)
-            possible_noncaltech.append((i, form_data_row, name))
+            if e.getcode() != 404:
+                print('Unexpected error!')
+                print(e)
+                import ipdb; ipdb.set_trace()
+                raise
+            else:
+                bad_indices.append(i)
+                possible_noncaltech.append((i, form_data_row, name))
 
     if len(possible_noncaltech) > 0:
         print('Possible non-Caltech signatures:')
