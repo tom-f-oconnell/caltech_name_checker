@@ -33,8 +33,7 @@ def main():
 
     if n:
         form_data_rows = form_data_rows[:n]
-        n_rows = len(form_data_rows)
-        assert n_rows == n
+    n_rows = len(form_data_rows)
 
     good_indices = []
     bad_indices = []
