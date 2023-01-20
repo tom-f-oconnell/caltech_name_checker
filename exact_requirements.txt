@@ -5,7 +5,7 @@ ipdb==0.13.2
 ipython==7.15.0
 ipython-genutils==0.2.0
 jedi==0.17.0
-mechanize==0.4.5
+mechanize==0.4.6
 numpy==1.18.4
 pandas==1.0.4
 parso==0.7.0
